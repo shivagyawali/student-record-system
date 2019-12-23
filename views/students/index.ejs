@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<title>Student Management System</title>
+<!-------------Head Section Starts-------------->
+<% include ../students/partials/head %>
+<!-------------Head Section Ends-------------->
+
+<!----------------Nav Starts------------------->
+<% include ../students/partials/nav %>
+
+<!----------------Nav Ends------------------->
+<div class="container">
+    <div class="row">
+        <% include ../students/partials/messages.ejs %>
+
+        <div class="input-field col s7">
+            <a class="btn waves-effect waves-light green col s4" href="/students/create">Add Records</a>
+        </div>
+    </div>
+    <%if (students.length >0){ %>
+    <table>
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Batch</th>
+                <th>Address</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% students.forEach(function(student){ %>
+            <tr>
+                <td><%= student.name %></td>
+                <td><%= student.batch %></td>
+                <td><%= student.address %></td>
+                <td> <a class="btn waves-effect waves-light blue col s4" href="/students/show/<%= student._id%>">View
+                        Details</a>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <% } else { %>
+    <div>No Students Found</div>
+    <% } %>
+</div>
+</div>

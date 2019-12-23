@@ -1,0 +1,69 @@
+<style>
+  .btn {
+    margin-top: 10px;
+
+  }
+
+
+  @media(max-width: 952px) {
+    .container {
+      width: 60%;
+    }
+  }
+
+  @media(max-width: 475px) {
+    .container {
+      width: 80%;
+    }
+  }
+
+  .chip_message_info,
+  .chip_message_warning,
+  .chip_message_alert {
+    text-align: center;
+    margin-left: 20px !important;
+    padding-top: 5px !important;
+    padding-bottom: 10px !important;
+    font-size: 20px !important;
+    min-width: 10%;
+    min-height: 25px;
+  }
+
+  .chip_message_info {
+    background-color: #bbdefb !important;
+  }
+
+  .chip_message_warning {
+    background-color: #ffcc80 !important;
+  }
+
+  .chip_message_alert {
+    background-color: #ef9a9a !important;
+  }
+</style>
+
+<% if(typeof errors != 'undefined'){ %> <% errors.forEach(function(error) { %>
+<div class="chip chip_message_alert" role="alert">
+  <%= error.msg %>
+  <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% }); %> <% } %> <% if(success_msg != ''){ %>
+<div class="chip chip_message_info" role="alert">
+  <%= success_msg %>
+  <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% } %> <% if(error_msg != ''){ %>
+<div class="chip chip_message_alert" role="alert">
+  <%= error_msg %>
+  <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% } %> <% if(error != ''){ %>
+<div class="chip chip_message_alert" role="alert">
+  <%= error %>
+  <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<% } %>

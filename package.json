@@ -1,0 +1,23 @@
+{
+  "name": "student-management-crud",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.8.0",
+    "nodemon": "^1.17.5",
+    "parseurl": "^1.3.3",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}

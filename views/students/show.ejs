@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Student Management System</title>
+<!-------------Head Section Starts-------------->
+<% include ../students/partials/head %>
+<!-------------Head Section Ends-------------->
+
+<!----------------Nav Starts------------------->
+<% include ../students/partials/nav %>
+
+<!----------------Nav Ends------------------->
+
+<body class="bg-success">
+
+    <div class="container">
+        <h1>Student Detail</h1>
+
+        <% include ../students/partials/messages %>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>:</td>
+                    <td><%= student.name %></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>:</td>
+                    <td><%= student.address %></td>
+                </tr>
+                <tr>
+                    <td>Batch</td>
+                    <td>:</td>
+                    <td><%= student.batch %></td>
+                </tr>
+                <tr>
+                    <td>Work Experience</td>
+                    <td>:</td>
+                    <td><%= student.work_Experience %>/year</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <a href="/students/edit/<%= student._id%>" class="btn waves-effect waves-light green col s4">EDIT</a>
+        <form method="post" action="/students/delete/<%= student._id%>">
+            <button type="submit" name="action" value='Delete' class="btn waves-effect waves-light red col s4"
+                onClick="return confirm('Are you sure you want to delete?')" />Delete
+            <input type="hidden" name="_method" value="DELETE" />
+        </form>
+
+    </div>
+
+</body>
+
+</html>

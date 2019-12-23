@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<title>Student Management System</title>
+
+<!-------------Head Section Starts-------------->
+<% include ./students/partials/head %>
+<!-------------Head Section Ends-------------->
+<div class="container">
+  <h1>Welcome To Student Record System</h1>
+
+  <form class="myclass" action="/" method="post">
+    <div class="row">
+      <link rel="stylesheet" href="">
+      <% include ./students/partials/messages.ejs%>
+    </div>
+    <div class="row margin">
+      <div class="input-field col s6">
+        <i class="mdi-social-person-outline prefix"></i>
+        <input class="validate" id="first_name" type="text" name="username">
+        <label for="first_name" data-error="wrong" data-success="right" class="center-align">Admin
+          Name</label>
+      </div>
+    </div>
+    <div class="row margin">
+      <div class="input-field col s6">
+        <i class="mdi-action-list prefix"></i>
+        <input class="validate" id="password" type="password" name="password">
+        <label for="password" data-error="wrong" data-success="right" class="center-align">Password
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <button class="btn waves-effect waves-light col s6" type="submit">Login</a>
+      </div>
+    </div>
+</div>
+</div>
+
+</html>

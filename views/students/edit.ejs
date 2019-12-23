@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<title>Student Management System</title>
+<!-------------Head Section Starts-------------->
+<% include ../students/partials/head %>
+<!-------------Head Section Ends-------------->
+
+<!----------------Nav Starts------------------->
+<% include ../students/partials/nav %>
+
+<!----------------Nav Ends------------------->
+<div class="container">
+
+    <div id="login-page" class="row">
+        <div class="col s12 z-depth-6 card-panel">
+            <div class="input-field col s12 center">
+                <h1 class="center login-form-text" href="/students">Edit Record</h1>
+            </div>
+            <form class="myclass" action="/students/update/<%= student._id%>" method="post">
+                <div class="row">
+
+                </div>
+                <div class="row margin">
+                    <div class="input-field col s6">
+                        <i class="mdi-social-person-outline prefix"></i>
+                        <input class="validate" id="email" type="text" name="name" value="<%= student.name %>">
+                        <label for="first_name" data-error="wrong" data-success="right" class="center-align">Student
+                            Name</label>
+                    </div>
+                </div>
+                <div class="row margin">
+                    <div class="input-field col s6">
+                        <i class="mdi-action-list prefix"></i>
+                        <input class="validate" id="email" type="text" name="address" value="<%= student.address %>">
+                        <label for="first_name" data-error="wrong" data-success="right" class="center-align">Address
+                        </label>
+                    </div>
+                </div>
+                <div class="row margin">
+                    <div class="input-field col s6">
+                        <i class="mdi-action-list prefix"></i>
+                        <input class="validate" id="email" type="text" name="batch" value="<%= student.batch %>">
+                        <label for="first_name" data-error="wrong" data-success="right" class="center-align">Batch
+                        </label>
+                    </div>
+                </div>
+                <div class="row margin">
+                    <div class="input-field col s6">
+                        <i class="mdi-action-settings-ethernet prefix"></i>
+                        <input class="validate" id="email" type="text" name="work_Experience"
+                            value="<%= student.work_Experience %>">
+                        <label for="first_name" data-error="wrong" data-success="right" class="center-align">Work
+                            Experience
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button class="btn waves-effect waves-light col s6" type="submit">Update</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<title>Student Management System</title>
+<!-------------Head Section Starts-------------->
+<% include ../students/partials/head %>
+<!-------------Head Section Ends-------------->
+
+<!----------------Nav Starts------------------->
+<% include ../students/partials/nav %>
+
+<!----------------Nav Ends------------------->
+
+<div class="container">
+
+    <div id="login-page" class="row">
+        <div class="col s12 z-depth-6 card-panel">
+            <div class="input-field col s12 center">
+                <h1 class="center login-form-text" href="/students">Add Record</h1>
+            </div>
+
+            <form class="myclass" action="/students/save" method="post">
+                <div class="row">
+
+                </div>
+                <div class="row margin">
+                    <div class="input-field col s6">
+                        <i class="mdi-social-person-outline prefix"></i>
+                        <input class="validate" id="first_name" type="text" name="name">
+                        <label for="first_name" data-error="wrong" data-success="right" class="center-align">Student
+                            Name</label>
+                        <% include ../students/partials/messages.ejs %>
+
+                    </div>
+                </div>
+                <div class="row margin">
+                    <div class="input-field col s6">
+                        <i class="mdi-action-assignment prefix"></i>
+                        <textarea class="validate" id="first_name" type="text"
+                            style="margin: 0px 0px 0px 45px; width: 360px; height: 128px;" name="address"></textarea>
+                        <label for="first_name" data-error="wrong" data-success="right" class="center-align">Address
+                        </label>
+                    </div>
+                </div>
+                <div class="row margin">
+                    <div class="input-field col s6">
+                        <i class="mdi-action-list prefix"></i>
+                        <input class="validate" id="first_name" type="text" name="batch">
+                        <label for="first_name" data-error="wrong" data-success="right" class="center-align">Batch
+                        </label>
+                    </div>
+                </div>
+                <div class="row margin">
+                    <div class="input-field col s6">
+                        <i class="mdi-action-settings-ethernet prefix"></i>
+                        <input class="validate" id="first_name" type="number" name="work_Experience">
+                        <label for="first_name" data-error="wrong" data-success="right" class="center-align">Work
+                            Experience
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button class="btn" type="submit">Create</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+</html>
